@@ -1,0 +1,32 @@
+<div id="secant">
+
+
+  <input id="secantPrecision" type="text" placeholder="Enter precision" title="precision" (keyup)="precisionSelector($event)">
+
+  <input id="secantTolerance" type="text" placeholder="Enter tolerance percent" title="tolerance" (keyup)="toleranceSelector($event)">
+
+  <input id="secantFn" type="text" placeholder="Enter F(x)" title="function F(x)" (keyup)="functionSelector($event)">
+
+  <input id="secantGuess1" type="text" placeholder="Enter Xo initial guess" title="Xo guess" (keyup)="guess1Setter($event)">
+
+  <input id="secantGuess2" type="text" placeholder="Enter X1 initial guess" title="X1 guess" (keyup)="guess2Setter($event)">
+
+  <input id="secantSolve" type="button" title="solve secant method" value="solve" (click)="secant()">
+
+
+  <canvas id="secantCanvas" width="1500" height="1500"></canvas>
+
+
+  <div id="secantDisplay">
+    <p> Secant Method <br> (you can modify and solve again without refresh) </p>
+    <p> Run Time = {{this.runTime}} milli second</p>
+    <ul *ngFor="let i of coff; let j = index">
+      <div> Iteration: {{j}} </div> <br>
+      <div id="coff"> X{{j}} = {{prevCoff[j]}}   ||   X{{j+1}} = {{coff[j]}}   ||   X{{j+2}} = {{nextCoff[j]}} </div> <br>
+      <div id="fn"> F(X{{j}}) = {{prevCoffSub[j]}}   ||   F(X{{j+1}}) = {{coffSub[j]}}   ||   F(X{{j+2}}) = {{nextCoffSub[j]}} </div> <br>
+      <div id="relative"> Relative Error = {{relatives[j]}}% </div> <br>
+    </ul>
+  </div>
+
+</div>
+

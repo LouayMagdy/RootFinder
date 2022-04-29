@@ -1,0 +1,44 @@
+<div class="fPI">
+  <label id="titleFPI">Fixed Point Iteration Method</label>
+  <div id="getParamFPI">
+    <div class="eqn">
+      <label style="text-decoration: underline">About The Eqn </label>
+      <input id="eqnFPI" type="text" placeholder="Type The Equation here" (keyup)="receiveFunc($event)">
+      <input id="guessFPI" type="text" placeholder="Enter The Initial Guess" (keyup)="setInitialGuess($event)">
+    </div>
+    <div class="precision">
+
+      <div class="epsFPI">
+        <label for="epsFPI" class="epsFPI">The EPSIlON Value:  </label>
+        <input id="epsFPI" type="text" placeholder="0.00001" (keyup)="setMachineEps($event)">
+      </div>
+
+      <div class="iterFPI">
+        <label for="iterFPI" class="iterFPI" >The MAX Number Of Iterations:  </label>
+        <input id="iterFPI" type="text" placeholder="50" (keyup)="setMaxIterNo($event)">
+      </div>
+    </div>
+    <button id="solveFPI" (click)="reformulate();fixedPointIter();plot()">Solve!</button>
+  </div>
+  <canvas id="plot" width="535" height="300"></canvas>
+  <label class="solnFPI">The Solution</label>
+  <label id="gX">g(x) = {{gxFunction}}</label>
+  <div id="solnFPI" *ngIf="!noSoln">
+    <div class="xiFPI1">
+      <label class="xiFPILabel">X<sub>i</sub></label>
+      <ul *ngFor="let x of soln; let i = index">
+        <li id="xiFPI"> X<sub>{{i}} :</sub> {{soln[i][0]}}</li>
+      </ul>
+    </div>
+
+    <div class="erroriFPI1">
+      <label class="erroriFPILabel">Error<sub>i</sub></label>
+      <ul *ngFor="let x of soln; let i = index">
+        <li id="erroriFPI">Error<sub>{{i}} :</sub>{{soln[i][1]}}</li>
+      </ul>
+    </div>
+    <label id="time">time elapsed: {{time}} ms</label>
+  </div>
+
+
+</div>

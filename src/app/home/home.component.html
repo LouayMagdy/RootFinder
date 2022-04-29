@@ -1,0 +1,51 @@
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css"
+  rel="stylesheet"
+/>
+
+<div class="modal-dialog" id="newtonMethodModal">
+  <div class="modal-content">
+    <div class="modal-header" style="align-self: center; border-bottom: white; color: red">
+      <h5 class="modal-title" style="font-size: 24px">Root Finding Methods</h5>
+    </div>
+    <div class="modal-body" style="padding-top: 50px; align-self: center; padding-bottom: 400px">
+      <form style="align-self: center; width: 500px; padding-left: 50px">
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button style="padding-right: 164px" id="bisectionBtn" routerLink="/bisection">Solve by Bisection method</button>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button style="padding-right: 130px" id="falseBtn" routerLink="/false-position">Solve by False-Position method</button>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button style="padding-right: 90px" id="fixedBtn" routerLink="/fixed-point-iteration">Solve by Fixed-point Iteration method</button>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button style="padding-right: 110px" id="newtonBtn" routerLink="/newton-raphson">Solve by Newton-Raphson method</button>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <button style="padding-right: 183px" id="secantBtn" routerLink="/secant">Solve by Secant method</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

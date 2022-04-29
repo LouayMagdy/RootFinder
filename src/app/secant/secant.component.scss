@@ -1,0 +1,71 @@
+
+#secantPrecision{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#secantTolerance{
+  position: absolute;
+  top: 60px;
+  left: 10px;
+}
+
+#secantFn{
+  position: absolute;
+  top: 110px;
+  left: 10px;
+}
+
+#secantGuess1{
+  position: absolute;
+  top: 160px;
+  left: 10px;
+}
+
+#secantGuess2{
+  position: absolute;
+  top: 210px;
+  left: 10px;
+}
+
+
+#secantSolve{
+  position: absolute;
+  top: 260px;
+  left: 10px;
+  width: 75px;
+  height: 25px;
+  background-color: yellowgreen;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+#secantDisplay{
+  display: none;
+  position: absolute;
+  top: 310px;
+  left: 10px;
+  border-style:solid;
+  border-color: black;
+  background-color: yellowgreen;
+  font-size: 20px;
+}
+
+p{
+  font-size: 30px;
+  font-weight: bold;
+  align: center;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+#secantCanvas{
+  display: none;
+  position: absolute;
+  top: 310px;
+  left: 1000px;
+  background-color: white;
+  border-style: solid;
+}
+
